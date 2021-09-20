@@ -11,22 +11,6 @@ const AdminVenues = () => {
 
   const token = localStorage.getItem('admin-login');
 
-  // const getData = async()=>{
-  //   await axios
-  //     .get('http://localhost:3000/admin/venues', {
-  //       headers: {
-  //         'Content-Type': 'application/x-www-form-urlencoded',
-  //         auth: token,
-  //       },
-  //     })
-  //     .then((res) => {
-  //       return setVenuesData(res.data.data);
-  //     })
-  //     .catch((err) => console.log(err));
-  // }
-  // // useEffect(() => {
-  // //   getData()
-  // // }, [])
 
   const getVenue = async()=>{
     await instence

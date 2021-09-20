@@ -1,7 +1,16 @@
-import React from 'react'
+import React,{useEffect} from 'react'
+import instence from '../../helpers/axiosistence'
 import './venue.css'
 
-const AdminVenuesInfo = () => {
+const AdminVenuesInfo = (props) => {
+
+const infoId =props.match.params.id
+
+useEffect(async() => {
+         await instence.get(`admin/venues/${infoId}`)  
+                       .then((result)=>console.log(result))
+}, [])
+
     return (
         <>
             <div className="full-content">
