@@ -1,7 +1,7 @@
 import axios from "axios"
 const isToken = localStorage.getItem('admin-login');
 
-  const baseUrl = 'http://localhost:3000/'
+  const baseUrl = '18.171.24.247:3000/'
   const token = isToken ?  isToken : '';
   const header = {
     headers: { 

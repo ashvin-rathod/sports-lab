@@ -33,70 +33,70 @@ const AdminAddVenue = () => {
   // validation
   const handleAddVenue = async (e) => {
     e.preventDefault();
-    if (venueName === '') {
-      setVenueNameAlert('please enter Venue Name ');
-    } else if (venueName !== '') {
-      setVenueNameAlert('');
-    }
-    if (fieldLength === '') {
-      setFieldLengthAlert('please enter Field Length ');
-    } else if (fieldLength !== '') {
-      setFieldLengthAlert('');
-    }
-    if (fieldWidth === '') {
-      setFieldWidthAlert('please enter Field Width ');
-    } else if (fieldWidth !== '') {
-      setFieldWidthAlert('');
-    }
-    if (totalFieldArea === '') {
-      setTotalFieldAreaAlert('please enter totalFieldArea ');
-    } else if (totalFieldArea !== '') {
-      setTotalFieldAreaAlert('');
-    }
-    if (description === '') {
-      setDescriptionAlert('please enter description ');
-    } else if (description !== '') {
-      setDescriptionAlert('');
-    }
-    if (address === '') {
-      setAddressAlert('please enter address ');
-    } else if (address !== '') {
-      setAddressAlert('');
-    }
-    if (surfaceType === '') {
-      setSurfaceTypeAlert('please enter Surface type ');
-    } else if (surfaceType !== '') {
-      setSurfaceTypeAlert('');
-    }
-    if (country === '') {
-      setCountryAlert('please enter country ');
-    } else if (country !== '') {
-      setCountryAlert('');
-    }
-    if (state === '') {
-      setStateAlert('please enter state ');
-    } else if (state !== '') {
-      setStateAlert('');
-    }
-    if (city === '') {
-      setCityAlert('please enter City ');
-    } else if (city !== '') {
-      setCityAlert('');
-    }
+    // if (venueName === '') {
+    //   setVenueNameAlert('please enter Venue Name ');
+    // } else if (venueName !== '') {
+    //   setVenueNameAlert('');
+    // }
+    // if (fieldLength === '') {
+    //   setFieldLengthAlert('please enter Field Length ');
+    // } else if (fieldLength !== '') {
+    //   setFieldLengthAlert('');
+    // }
+    // if (fieldWidth === '') {
+    //   setFieldWidthAlert('please enter Field Width ');
+    // } else if (fieldWidth !== '') {
+    //   setFieldWidthAlert('');
+    // }
+    // if (totalFieldArea === '') {
+    //   setTotalFieldAreaAlert('please enter totalFieldArea ');
+    // } else if (totalFieldArea !== '') {
+    //   setTotalFieldAreaAlert('');
+    // }
+    // if (description === '') {
+    //   setDescriptionAlert('please enter description ');
+    // } else if (description !== '') {
+    //   setDescriptionAlert('');
+    // }
+    // if (address === '') {
+    //   setAddressAlert('please enter address ');
+    // } else if (address !== '') {
+    //   setAddressAlert('');
+    // }
+    // if (surfaceType === '') {
+    //   setSurfaceTypeAlert('please enter Surface type ');
+    // } else if (surfaceType !== '') {
+    //   setSurfaceTypeAlert('');
+    // }
+    // if (country === '') {
+    //   setCountryAlert('please enter country ');
+    // } else if (country !== '') {
+    //   setCountryAlert('');
+    // }
+    // if (state === '') {
+    //   setStateAlert('please enter state ');
+    // } else if (state !== '') {
+    //   setStateAlert('');
+    // }
+    // if (city === '') {
+    //   setCityAlert('please enter City ');
+    // } else if (city !== '') {
+    //   setCityAlert('');
+    // }
 
-    if (
-      venueName !== '' &&
-      fieldLength !== '' &&
-      fieldWidth !== '' &&
-      totalFieldArea !== '' &&
-      description !== '' &&
-      address !== '' &&
-      surfaceType !== '' &&
-      country !== '' &&
-      state !== '' &&
-      city !== '' 
-      // image !== '' 
-    ) {
+    // if (
+    //   venueName !== '' &&
+    //   fieldLength !== '' &&
+    //   fieldWidth !== '' &&
+    //   totalFieldArea !== '' &&
+    //   description !== '' &&
+    //   address !== '' &&
+    //   surfaceType !== '' &&
+    //   country !== '' &&
+    //   state !== '' &&
+    //   city !== '' 
+    //   // image !== '' 
+    // ) {
 
         
     // fetchapi
@@ -113,7 +113,7 @@ const AdminAddVenue = () => {
     formdata.append('country', country);
     formdata.append('state', state);
     formdata.append('city', city);
-    // formdata.append('upload_image',image );
+    // formdata.append('upload_image',image ); 
 
     await axios
       .post('http://localhost:3000/admin/createvenue', formdata, {
@@ -130,7 +130,7 @@ const AdminAddVenue = () => {
       })
       .catch((err) => console.log(err));
 
-    }
+    // }
 
   };
 
