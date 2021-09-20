@@ -34,7 +34,7 @@ const AdminLogin = () => {
       urlencoded.append("email", email);
       urlencoded.append("password", password);
       
-      // const url = 'admin/login';
+      const url = 'admin/login';
       
       // postaxios(url,urlencoded).then((result)=>{
       //   console.log('result are', result.data.token)
