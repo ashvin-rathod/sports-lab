@@ -34,7 +34,7 @@ const AdminLogin = () => {
       urlencoded.append("email", email);
       urlencoded.append("password", password);
       
-        await instence.post('admin/login',urlencoded )
+        await instence.post('admin/login', urlencoded)
                        .then((result)=>{console.log('result are', result.data.token);
                         if(result.data.token){
                           localStorage.setItem('admin-login', result.data.token);
