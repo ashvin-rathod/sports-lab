@@ -29,8 +29,21 @@ const AdminLogin = () => {
     if (email && password) {
       // fetch api
       var urlencoded = new URLSearchParams();
-      urlencoded.append('email', email);
-      urlencoded.append('password', password);
+      urlencoded.append("email", email);
+      urlencoded.append("password", password);
+      
+        await instence.post('admin/login', urlencoded)
+                       .then((result)=>{console.log('result are', result.data.token);
+                        if(result.data.token){
+                          localStorage.setItem('admin-login', result.data.token);
+                          localStorage.setItem('login-details', JSON.stringify(result.data.res));
+                          history.push('/admindashboard');
+                        }else {
+                          alert('Invalid User');
+                          console.log('error');
+                        }
+                      })
+                      .catch(err=>console.log(err))
 
       
 

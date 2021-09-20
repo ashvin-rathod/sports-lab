@@ -111,19 +111,19 @@ const AdminVenues = () => {
                           {' '}
                           <img src="images/svg/edit-fill.svg" alt="view" />
                         </button>
-                        <a href="#" className="action-btn">
+                        <button  className="action-btn">
                           {' '}
                           <img src="images/svg/View.svg" alt="view" />
-                        </a>
-                        <a
-                          href="#"
+                        </button>
+                        <button
+                         
                           className="action-btn"
                           data-toggle="modal"
                           data-target="#delete-modal"
                         >
                           {' '}
                           <img src="images/svg/BinV1.svg" alt="view" />
-                        </a>
+                        </button>
                       </td>
                       <td>
                         <a href="#" className="btn btn-outline-primary">

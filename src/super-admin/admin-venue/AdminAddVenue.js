@@ -117,7 +117,7 @@ const AdminAddVenue = () => {
     // formdata.append('upload_image',image ); 
 
     await axios
-      .post('http://localhost:3000/admin/createvenue', formdata, {
+      .post('http://localhost:3000/admin/createvenue',   formdata, {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
           auth: token,
