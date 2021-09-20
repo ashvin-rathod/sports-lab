@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import instence from '../../helpers/axiosistence';
+import './AdminAddVenue.css'
 // import axios from 'axios'
 
 const AdminVenues = () => {
@@ -105,7 +106,7 @@ const AdminVenues = () => {
                       <td>
                         <span className="badge badge-lightgreen">Active</span>{' '}
                       </td>
-                      <td>
+                      <td> 
                         <button onClick={handleChange} className="action-btn">
                           {' '}
                           <img src="images/svg/edit-fill.svg" alt="view" />

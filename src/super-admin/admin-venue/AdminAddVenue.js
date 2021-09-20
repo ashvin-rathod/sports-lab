@@ -34,70 +34,70 @@ const AdminAddVenue = () => {
   // validation
   const handleAddVenue = async (e) => {
     e.preventDefault();
-    // if (venueName === '') {
-    //   setVenueNameAlert('please enter Venue Name ');
-    // } else if (venueName !== '') {
-    //   setVenueNameAlert('');
-    // }
-    // if (fieldLength === '') {
-    //   setFieldLengthAlert('please enter Field Length ');
-    // } else if (fieldLength !== '') {
-    //   setFieldLengthAlert('');
-    // }
-    // if (fieldWidth === '') {
-    //   setFieldWidthAlert('please enter Field Width ');
-    // } else if (fieldWidth !== '') {
-    //   setFieldWidthAlert('');
-    // }
-    // if (totalFieldArea === '') {
-    //   setTotalFieldAreaAlert('please enter totalFieldArea ');
-    // } else if (totalFieldArea !== '') {
-    //   setTotalFieldAreaAlert('');
-    // }
-    // if (description === '') {
-    //   setDescriptionAlert('please enter description ');
-    // } else if (description !== '') {
-    //   setDescriptionAlert('');
-    // }
-    // if (address === '') {
-    //   setAddressAlert('please enter address ');
-    // } else if (address !== '') {
-    //   setAddressAlert('');
-    // }
-    // if (surfaceType === '') {
-    //   setSurfaceTypeAlert('please enter Surface type ');
-    // } else if (surfaceType !== '') {
-    //   setSurfaceTypeAlert('');
-    // }
-    // if (country === '') {
-    //   setCountryAlert('please enter country ');
-    // } else if (country !== '') {
-    //   setCountryAlert('');
-    // }
-    // if (state === '') {
-    //   setStateAlert('please enter state ');
-    // } else if (state !== '') {
-    //   setStateAlert('');
-    // }
-    // if (city === '') {
-    //   setCityAlert('please enter City ');
-    // } else if (city !== '') {
-    //   setCityAlert('');
-    // }
+    if (venueName === '') {
+      setVenueNameAlert('please enter Venue Name ');
+    } else if (venueName !== '') {
+      setVenueNameAlert('');
+    }
+    if (fieldLength === '') {
+      setFieldLengthAlert('please enter Field Length ');
+    } else if (fieldLength !== '') {
+      setFieldLengthAlert('');
+    }
+    if (fieldWidth === '') {
+      setFieldWidthAlert('please enter Field Width ');
+    } else if (fieldWidth !== '') {
+      setFieldWidthAlert('');
+    }
+    if (totalFieldArea === '') {
+      setTotalFieldAreaAlert('please enter totalFieldArea ');
+    } else if (totalFieldArea !== '') {
+      setTotalFieldAreaAlert('');
+    }
+    if (description === '') {
+      setDescriptionAlert('please enter description ');
+    } else if (description !== '') {
+      setDescriptionAlert('');
+    }
+    if (address === '') {
+      setAddressAlert('please enter address ');
+    } else if (address !== '') {
+      setAddressAlert('');
+    }
+    if (surfaceType === '') {
+      setSurfaceTypeAlert('please enter Surface type ');
+    } else if (surfaceType !== '') {
+      setSurfaceTypeAlert('');
+    }
+    if (country === '') {
+      setCountryAlert('please enter country ');
+    } else if (country !== '') {
+      setCountryAlert('');
+    }
+    if (state === '') {
+      setStateAlert('please enter state ');
+    } else if (state !== '') {
+      setStateAlert('');
+    }
+    if (city === '') {
+      setCityAlert('please enter City ');
+    } else if (city !== '') {
+      setCityAlert('');
+    }
 
-    // if (
-    //   venueName !== '' &&
-    //   fieldLength !== '' &&
-    //   fieldWidth !== '' &&
-    //   totalFieldArea !== '' &&
-    //   description !== '' &&
-    //   address !== '' &&
-    //   surfaceType !== '' &&
-    //   country !== '' &&
-    //   state !== '' &&
-    //   city !== '' 
-    //   // image !== '' 
-    // ) {
+    if (
+      venueName !== '' &&
+      fieldLength !== '' &&
+      fieldWidth !== '' &&
+      totalFieldArea !== '' &&
+      description !== '' &&
+      address !== '' &&
+      surfaceType !== '' &&
+      country !== '' &&
+      state !== '' &&
+      city !== '' 
+      // image !== '' 
+    ) {
 
         
     // fetchapi
@@ -131,7 +131,7 @@ const AdminAddVenue = () => {
       })
       .catch((err) => console.log(err));
 
-    // }
+    }
 
   };
 
@@ -157,7 +157,7 @@ const AdminAddVenue = () => {
                           placeholder="Venue Name"
                           onChange={(e) => setVenueName(e.target.value)}
                         />
-                        <p>{VenueNameAlert}</p>
+                        <p className='alert'>{VenueNameAlert}</p>
                       </div>
                     </div>
                     <div className="col-md-4">
@@ -170,7 +170,7 @@ const AdminAddVenue = () => {
                           placeholder="Field Length (m)"
                           onChange={(e) => setFieldLength(e.target.value)}
                         />
-                        <p>{FieldLengthAlert}</p>
+                        <p className='alert'>{FieldLengthAlert}</p>
                       </div>
                     </div>
                     <div className="col-md-4">
@@ -183,7 +183,7 @@ const AdminAddVenue = () => {
                           placeholder="Field Width (m)"
                           onChange={(e) => setFieldWidth(e.target.value)}
                         />
-                        <p>{FieldWidthAlert}</p>
+                        <p className='alert'>{FieldWidthAlert}</p>
                       </div>
                     </div>
                     <div className="col-md-4">
@@ -196,7 +196,7 @@ const AdminAddVenue = () => {
                           placeholder="Total field area"
                           onChange={(e) => setTotalFieldArea(e.target.value)}
                         />
-                        <p>{TotalFieldAreaAlert}</p>
+                        <p className='alert'>{TotalFieldAreaAlert}</p>
                       </div>
                     </div>
                     <div className="col-md-12">
@@ -209,9 +209,9 @@ const AdminAddVenue = () => {
                           <option>grass</option>
                           <option>plain </option>
                         </select>
+                    <p className='alert'>{SurfaceTypeAlert}</p>
                       </div>
                     </div>
-                    <p>{SurfaceTypeAlert}</p>
                     <div className="col-md-12">
                       <div className="form-group">
                         <textarea
@@ -221,7 +221,7 @@ const AdminAddVenue = () => {
                           value={description}
                           onChange={(e) => setDescription(e.target.value)}
                         ></textarea>
-                        <p>{DescriptionAlert}</p>
+                        <p className='alert'>{DescriptionAlert}</p>
                       </div>
                     </div>
                     <div className="col-md-12">
@@ -234,7 +234,7 @@ const AdminAddVenue = () => {
                           value={address}
                           onChange={(e) => setAddress(e.target.value)}
                         />
-                        <p>{AddressAlert}</p>
+                        <p className='alert'>{AddressAlert}</p>
                       </div>
                     </div>
                     <div className="col-md-4">
@@ -273,8 +273,8 @@ const AdminAddVenue = () => {
                         </select>
                       </div>
                     </div>
-                    <p>{CountryAlert}</p> <p>{StateAlert}</p>
-                    <p>{CityAlert}</p>
+                    <p className='alert'>{CountryAlert}</p> <p className='alert'>{StateAlert}</p>
+                    <p className='alert'>{CityAlert}</p>
                     <div className="col-md-12">
                       <h4 className="small-title">Upload image</h4>
                       <div className="form-group">

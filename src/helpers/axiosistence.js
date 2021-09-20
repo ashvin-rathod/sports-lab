@@ -9,16 +9,6 @@ const isToken = localStorage.getItem('admin-login');
       "auth": token
      }
   }
-
-  // axios get 
-  // export  const getaxios =  async(url)=>{
-  //   return (await axios.get(`${baseUrl}${url}`,header))
-  // }
- 
-  // // axios post   
-  // export  const postaxios = async(url,bodyData)=>{
-  //   return (await axios.post(`${baseUrl}${url}`,bodyData,header))
-  // }
  
   const instence = axios.create({
          baseURL:baseUrl,

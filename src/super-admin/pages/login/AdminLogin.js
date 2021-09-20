@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { Form, FormGroup } from 'react-bootstrap';
 import { Link, useHistory } from 'react-router-dom';
-import instence from '../../../helpers/axiosistence'
+import instence from '../../../helpers/axiosistence';
 
 const AdminLogin = () => {
   const [email, setEmail] = useState('');
@@ -13,7 +13,7 @@ const AdminLogin = () => {
 
   let history = useHistory();
 
-  const handleSubmit = async(event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     if (email === '') {
@@ -29,41 +29,45 @@ const AdminLogin = () => {
     if (email && password) {
       // fetch api
       var urlencoded = new URLSearchParams();
-      urlencoded.append("email", email);
-      urlencoded.append("password", password);
-      
-        await instence.post('admin/login',urlencoded )
-                       .then((result)=>{console.log('result are', result.data.token);
-                        if(result.data.token){
-                          localStorage.setItem('admin-login', result.data.token);
-                          localStorage.setItem('login-details', JSON.stringify(result.data.res));
-                          history.push('/admindashboard');
-                        }else {
-                          alert('Invalid User');
-                          console.log('error');
-                        }
-                      })
-                      .catch(err=>console.log(err))
+      urlencoded.append('email', email);
+      urlencoded.append('password', password);
 
       
-      // axios.post(`http://18.171.24.247:3000/admin/login`,urlencoded,{
-      //   headers: { "Content-Type": 'application/x-www-form-urlencoded' }
-      // }).then((result)=>{
-      //   console.log('result are', result.data.token)
+
+      // await instence.post('admin/login', urlencoded).then((result) => {
+      //   console.log('result are', result.data.token);
       //   if (result.data.token) {
-      //   // console.log('result are', result.data)
-      //   localStorage.setItem('admin-login', result.data.token);
-      //   localStorage.setItem('login-details', JSON.stringify(result.data.res));
-      //   // localStorage.setItem('login-id', result.data);
-      //   history.push('/admindashboard');
-      //   // console.log('data');
+      //     // console.log('result are', result.data)
+      //     localStorage.setItem('admin-login', result.data.token);
+      //     localStorage.setItem(
+      //       'login-details',
+      //       JSON.stringify(result.data.res)
+      //     );
+      //     // localStorage.setItem('login-id', result.data);
+      //     history.push('/admindashboard');
+      //     // console.log('data');
       //   } else {
       //     alert('Invalid User');
       //     console.log('error');
       //   }
-      // })
+      // });
 
-  
+      axios.post(`http://18.171.24.247:3000/admin/login`,urlencoded,{
+        headers: { "Content-Type": 'application/x-www-form-urlencoded' }
+      }).then((result)=>{
+        console.log('result are', result.data.token)
+        if (result.data.token) {
+        // console.log('result are', result.data)
+        localStorage.setItem('admin-login', result.data.token);
+        localStorage.setItem('login-details', JSON.stringify(result.data.res));
+        // localStorage.setItem('login-id', result.data);
+        history.push('/admindashboard');
+        // console.log('data');
+        } else {
+          alert('Invalid User');
+          console.log('error');
+        }
+      })
     }
   };
 
