@@ -11,7 +11,7 @@ const Dashboard = () => {
   const token = localStorage.getItem('admin-login');
   useEffect( async() => {
     await axios
-      .get('http://localhost:3000/admin/admindashboard', {
+      .get('http://18.171.24.247:3000/admin/admindashboard', {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
           auth: token,
