@@ -1,4 +1,3 @@
-
 import axios from 'axios';
 import React, { useState } from 'react';
 import { Form, FormGroup } from 'react-bootstrap';
@@ -16,7 +15,7 @@ const AdminLogin = () => {
 
   const handleSubmit = async(event) => {
     event.preventDefault();
-  
+
     if (email === '') {
       setEmailerror('Please enter email id');
     } else {
@@ -28,7 +27,6 @@ const AdminLogin = () => {
       setPasserror('');
     }
     if (email && password) {
-
       // fetch api
       var urlencoded = new URLSearchParams();
       urlencoded.append("email", email);
@@ -135,7 +133,7 @@ const AdminLogin = () => {
                       </p>
                     </div>
                     <div className="sr-link mt-3 mb-5">
-                      <Link to='/adminforgotpass' className="sa-deco1">
+                      <Link to="/adminforgotpass" className="sa-deco1">
                         Forgot Password ?
                       </Link>
                     </div>
