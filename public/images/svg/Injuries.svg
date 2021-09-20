@@ -1,0 +1,7 @@
+<svg id="Injuries" xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52">
+  <rect id="Rectangle_2437" data-name="Rectangle 2437" width="52" height="52" rx="10" fill="rgba(0,110,85,0.1)" opacity="0"/>
+  <g id="file-list-3-fill" transform="translate(14 14)">
+    <path id="Path_2045" data-name="Path 2045" d="M0,0H24V24H0Z" fill="none"/>
+    <path id="Icon_awesome-exclamation-triangle" data-name="Icon awesome-exclamation-triangle" d="M20.071,15.507a1.693,1.693,0,0,1-1.465,2.537H1.694A1.693,1.693,0,0,1,.228,15.507L8.685.845a1.693,1.693,0,0,1,2.931,0ZM10.15,12.476A1.621,1.621,0,1,0,11.771,14.1,1.621,1.621,0,0,0,10.15,12.476ZM8.611,6.649l.261,4.793a.423.423,0,0,0,.422.4h1.711a.423.423,0,0,0,.422-.4l.261-4.793a.423.423,0,0,0-.422-.446H9.033a.423.423,0,0,0-.422.446Z" transform="translate(2 2.956)" fill="#006e55"/>
+  </g>
+</svg>

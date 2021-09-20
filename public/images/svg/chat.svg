@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
+  <g id="Chat" transform="translate(-1600 -19)">
+    <g id="Ellipse_52" data-name="Ellipse 52" transform="translate(1600 19)" fill="#fff" stroke="#f4a701" stroke-width="2">
+      <circle cx="21" cy="21" r="21" stroke="none"/>
+      <circle cx="21" cy="21" r="20" fill="none"/>
+    </g>
+    <g id="message-3-fill" transform="translate(1609 28)">
+      <path id="Path_1963" data-name="Path 1963" d="M0,0H24V24H0Z" fill="none"/>
+      <path id="Path_1964" data-name="Path 1964" d="M2,8.994A5.99,5.99,0,0,1,8,3h8a6,6,0,0,1,6,5.994V21H8a6,6,0,0,1-6-5.994ZM14,11v2h2V11ZM8,11v2h2V11Z" fill="#f4a701"/>
+    </g>
+  </g>
+</svg>

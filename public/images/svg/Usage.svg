@@ -1,0 +1,7 @@
+<svg id="Usage" xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52">
+  <rect id="Rectangle_2437" data-name="Rectangle 2437" width="52" height="52" rx="10" fill="rgba(0,110,85,0.1)" opacity="0"/>
+  <g id="information-fill" transform="translate(14 14)">
+    <path id="Path_1981" data-name="Path 1981" d="M0,0H24V24H0Z" fill="none"/>
+    <path id="Path_1982" data-name="Path 1982" d="M12,22A10,10,0,1,1,22,12,10,10,0,0,1,12,22ZM11,11v6h2V11Zm0-4V9h2V7Z" fill="#006e55"/>
+  </g>
+</svg>

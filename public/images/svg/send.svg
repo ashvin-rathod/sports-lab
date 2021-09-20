@@ -1,0 +1,7 @@
+<svg id="Button_-_Primary_FAB_" data-name="Button - Primary (FAB)" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <rect id="Rectangle_8" data-name="Rectangle 8" width="50" height="50" rx="25" fill="#006e55"/>
+  <g id="send-plane-fill" transform="translate(13 13)">
+    <path id="Path_2029" data-name="Path 2029" d="M0,0H24V24H0Z" fill="none"/>
+    <path id="Path_2030" data-name="Path 2030" d="M1.946,9.315c-.522-.174-.527-.455.01-.634L21.043,2.319c.529-.176.832.12.684.638L16.273,22.043c-.15.529-.455.547-.679.045L12,14l6-8-8,6L1.946,9.315Z" fill="#fff"/>
+  </g>
+</svg>

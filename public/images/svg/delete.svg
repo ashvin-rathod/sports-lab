@@ -1,0 +1,7 @@
+<svg id="Button_-_Primary_FAB_" data-name="Button - Primary (FAB)" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <rect id="Rectangle_8" data-name="Rectangle 8" width="50" height="50" rx="25" fill="#ff4d4d"/>
+  <g id="delete-bin-7-fill" transform="translate(13 13)">
+    <path id="Path_2035" data-name="Path 2035" d="M0,0H24V24H0Z" fill="none"/>
+    <path id="Path_2036" data-name="Path 2036" d="M7,6V3A1,1,0,0,1,8,2h8a1,1,0,0,1,1,1V6h5V8H20V21a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V8H2V6ZM9,4V6h6V4Z" fill="#fff"/>
+  </g>
+</svg>

@@ -1,0 +1,165 @@
+@media screen and (max-width: 991px) {
+	.search-span{
+		display: none;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	.chart-div {
+	    padding: 20px;
+	}
+	.blog-image .mimg{
+		height: 120px;
+	}
+	.dubai-map{
+		height: calc(100vh - 230px);
+	}
+}
+@media screen and (max-width: 767px) {
+	.mobile-show{
+		display: block !important;
+	}
+	.lrm-content{
+		padding: 15px;
+		padding-top: 90px;
+	}
+	.search-flex > * {
+	    margin-left: 6px;
+	}
+	.chart-div {
+	    padding: 20px;
+	}
+	.mobile-li{
+		display: block !important;
+		   
+	}
+	.rightul li{
+		 margin-left: 10px;
+	}
+	.sidebar-button {
+	        background: transparent;
+	    font-size: 11px;
+	    border: 1px solid #3b3f5c;
+	    color: #3b3f5c;
+	    border-radius: 4px;
+	            height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	}
+	.lmrlogo img{
+		margin-left: 0;
+	}
+	.rightul{
+		margin-right: 0;
+	}
+	.side-menu {
+		left: -52px;
+		box-shadow: none;
+
+	}
+	.side-menu.open {
+		left: 0;
+		box-shadow: 0px 5px 30px #1e1e2252;
+	}
+	.search-flex input.form-control {
+	    width: 150px;
+	}
+	.add {
+	    min-width: 120px;
+	}
+	.search-flex select {
+	    min-width: 140px;
+	}
+	.rightul .dropdown-toggle{
+		margin-left: 0;
+	}
+	.mobile-hide {
+	    display: none;
+	}
+	.noti{
+		flex-wrap: wrap;
+	}
+	.noti p {
+	    flex: 0 0 calc(100% - 79px);
+	    margin-right: 0;
+	}
+
+	.noti a, .noti h6 {
+	    margin-top: 15px;
+	}
+	.edit-user-nav .nav-item, .nav-tabs.edit-user-nav .nav-link {
+		flex-basis: 100%;
+	}
+	.nav-tabs.edit-user-nav li:first-child .nav-link {
+	    border-top: 0;
+	    border-radius: 4px 4px 0 0 !important;
+	}
+	.nav-tabs.edit-user-nav .nav-link {
+		border-left: 0;
+		border-top: 1px solid;
+	}
+	.nav-tabs.edit-user-nav li:last-child .nav-link {
+	    border-radius: 0 0 4px 4px !important;
+	}
+	.a-header{
+		font-size: 10px;
+	}
+			.rightul li a > img {
+		    height: 22px;
+		}
+
+		.rightul .dropdown-toggle img {
+		    height: 22px;
+		    width: 22px;
+		}
+
+.full-content {
+    padding: 15px;
+    padding-top: 92px;
+}
+.manage-support-ul {
+    height: 300px;
+}
+.dubai-map {
+    height: calc(100vh - 220px);
+    }
+    .side-menu ul li{
+    	margin-bottom: 6px;
+    }
+    .a-header img {
+	    margin-left: 0 !important;
+	}
+	.attachments-tbl {
+	    padding-left: 0;
+	}
+	.manage-support-ul li img, .mini-profile img, .sort-name {
+	    height: 40px;
+	    width: 40px;
+	    flex: 0 0 40px;
+	    margin-right: 10px;
+	}
+	.rightul .name h6, .rightul .name h5{
+		font-size: 10px;
+	}
+	.rightul .btn-group .dropdown-menu a.dropdown-item {
+	    padding: 8px 10px;
+	    font-size: 10px;
+	}
+	.rightul .dropdown-item img {
+	    height: 14px;
+	    margin-right: 8px;
+	}
+	.rightul .dropdown-menu.dropdown-menu-right.show {
+	    min-width: 160px;
+	}
+}
+@media screen and (max-width: 319px) {
+	.rightul li {
+	    margin-left: 5px;
+	}
+	.lmrlogo img {
+	    height: 12px;
+	    margin-top: 21px;
+	}
+
+}

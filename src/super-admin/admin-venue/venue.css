@@ -1,0 +1,10 @@
+.table td, .table th {
+    font-family: 'MontserratMedium';
+}
+.nav-tabs>li>a {
+    font-family: 'MontserratMedium';
+    color: #006E55;
+}
+.venue-info-table-title{
+    font-family: 'MontserratMedium';
+}

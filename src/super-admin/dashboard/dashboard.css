@@ -1,0 +1,11 @@
+.table > tbody > tr > td {
+    font-family: 'MontserratMedium';
+}
+a{
+    color: #006E55;
+    text-decoration: none;
+    background-color: transparent;
+}
+.text-primary {
+    color: #006E55!important;
+}

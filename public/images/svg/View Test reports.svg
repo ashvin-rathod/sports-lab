@@ -1,0 +1,7 @@
+<svg id="View_Test_reports" data-name="View Test reports" xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52">
+  <rect id="Rectangle_2437" data-name="Rectangle 2437" width="52" height="52" rx="10" fill="rgba(0,110,85,0.1)" opacity="0"/>
+  <g id="file-list-2-fill" transform="translate(14 14)">
+    <path id="Path_2047" data-name="Path 2047" d="M0,0H24V24H0Z" fill="none"/>
+    <path id="Path_2048" data-name="Path 2048" d="M20,22H4a1,1,0,0,1-1-1V3A1,1,0,0,1,4,2H20a1,1,0,0,1,1,1V21A1,1,0,0,1,20,22ZM8,7V9h8V7Zm0,4v2h8V11Zm0,4v2h5V15Z" fill="#006e55"/>
+  </g>
+</svg>

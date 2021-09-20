@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="110" height="110" viewBox="0 0 110 110">
+  <defs>
+    <filter id="Rectangle_2563" x="0" y="0" width="110" height="110" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-color="#254edb" flood-opacity="0.047"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Download_Import" data-name="Download/Import" transform="translate(30 25)">
+    <g id="Download_Export" data-name="Download/Export">
+      <g transform="matrix(1, 0, 0, 1, -30, -25)" filter="url(#Rectangle_2563)">
+        <rect id="Rectangle_2563-2" data-name="Rectangle 2563" width="50" height="50" rx="25" transform="translate(30 25)" fill="#f4a701"/>
+      </g>
+    </g>
+    <g id="download-cloud-fill" transform="translate(13 13)">
+      <path id="Path_2013" data-name="Path 2013" d="M0,0H24V24H0Z" fill="none"/>
+      <path id="Path_2014" data-name="Path 2014" d="M7,20.981a6.5,6.5,0,0,1-2.936-12,8,8,0,0,1,15.872,0,6.5,6.5,0,0,1-2.936,12V21H7ZM13,12V8H11v4H8l4,5,4-5Z" fill="#fff"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+
+img.import-img {
+    height: 84px;
+    width: 84px;
+}
+.search-flex > * {
+    margin-bottom: 0px;
+}
+button.btn.import-btn {
+    padding: 0.5px 5px;
+}
+/* .lrm-content {
+    padding-top: 70px;
+} */

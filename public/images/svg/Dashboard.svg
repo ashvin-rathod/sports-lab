@@ -1,0 +1,7 @@
+<svg id="Dashboard" xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52">
+  <rect id="Rectangle_2437" data-name="Rectangle 2437" width="52" height="52" rx="10" fill="rgba(0,110,85,0.1)" opacity="0"/>
+  <g id="dashboard-fill" transform="translate(14 14)">
+    <path id="Path_1967" data-name="Path 1967" d="M0,0H24V24H0Z" fill="none"/>
+    <path id="Path_1968" data-name="Path 1968" d="M3,13h8V3H3Zm0,8h8V15H3Zm10,0h8V11H13ZM13,3V9h8V3Z" fill="#006e55"/>
+  </g>
+</svg>

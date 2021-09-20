@@ -1,0 +1,7 @@
+<svg id="Menu_Icon" data-name="Menu Icon" xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52">
+  <rect id="Rectangle_2437" data-name="Rectangle 2437" width="52" height="52" rx="10" fill="rgba(40,58,68,0.1)" opacity="0"/>
+  <g id="information-fill" transform="translate(14 14)">
+    <path id="Path_1981" data-name="Path 1981" d="M0,0H24V24H0Z" fill="none"/>
+    <path id="Icon_material-payment" data-name="Icon material-payment" d="M21.64,6H5.071A2.055,2.055,0,0,0,3.01,8.071L3,20.5a2.064,2.064,0,0,0,2.071,2.071H21.64A2.064,2.064,0,0,0,23.711,20.5V8.071A2.064,2.064,0,0,0,21.64,6Zm0,14.5H5.071V14.284H21.64Zm0-10.355H5.071V8.071H21.64Z" transform="translate(-1.361 -2.066)" fill="#283a44"/>
+  </g>
+</svg>
