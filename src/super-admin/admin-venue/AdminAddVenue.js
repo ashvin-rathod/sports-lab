@@ -18,6 +18,7 @@ const AdminAddVenue = () => {
   const [state, setState] = useState('');
   const [city, setCity] = useState('');
   const [image, setImage] = useState('');
+  console.log(image);
 
   // alert states
   const [VenueNameAlert, setVenueNameAlert] = useState('');
@@ -290,8 +291,8 @@ const AdminAddVenue = () => {
                               id="uploadBtn"
                               type="file"
                               className="upload"
-                              value={image}
-                              onChange={(e) => setImage(e.target.value)}
+                              files={image}
+                              onChange={(e) => setImage(e.target.files[0])}
                             />
                           </div>
                         </div>
