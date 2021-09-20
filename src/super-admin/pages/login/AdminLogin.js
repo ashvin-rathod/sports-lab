@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { Form, FormGroup } from 'react-bootstrap';
 import { Link, useHistory } from 'react-router-dom';
-// import {postaxios} from '../../../axios';
+import instence from '../../../helpers/axiosistence'
 
 const AdminLogin = () => {
   const [email, setEmail] = useState('');
@@ -13,7 +13,7 @@ const AdminLogin = () => {
 
   let history = useHistory();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async(event) => {
     event.preventDefault();
 
     if (email === '') {
@@ -29,68 +29,41 @@ const AdminLogin = () => {
     if (email && password) {
       // fetch api
       var urlencoded = new URLSearchParams();
-      urlencoded.append('email', email);
-      urlencoded.append('password', password);
+      urlencoded.append("email", email);
+      urlencoded.append("password", password);
+      
+        await instence.post('admin/login',urlencoded )
+                       .then((result)=>{console.log('result are', result.data.token);
+                        if(result.data.token){
+                          localStorage.setItem('admin-login', result.data.token);
+                          localStorage.setItem('login-details', JSON.stringify(result.data.res));
+                          history.push('/admindashboard');
+                        }else {
+                          alert('Invalid User');
+                          console.log('error');
+                        }
+                      })
+                      .catch(err=>console.log(err))
 
-      // const url = 'admin/login';
-
-      // postaxios(url,urlencoded).then((result)=>{
+      
+      // axios.post(`http://18.171.24.247:3000/admin/login`,urlencoded,{
+      //   headers: { "Content-Type": 'application/x-www-form-urlencoded' }
+      // }).then((result)=>{
       //   console.log('result are', result.data.token)
       //   if (result.data.token) {
-      //   console.log('result are', result.data)
+      //   // console.log('result are', result.data)
       //   localStorage.setItem('admin-login', result.data.token);
-      //   localStorage.setItem('admin-details', JSON.stringify(result.data.res));
+      //   localStorage.setItem('login-details', JSON.stringify(result.data.res));
+      //   // localStorage.setItem('login-id', result.data);
       //   history.push('/admindashboard');
-      //   console.log('data');
+      //   // console.log('data');
       //   } else {
       //     alert('Invalid User');
       //     console.log('error');
       //   }
       // })
 
-      axios
-        .post('http://18.171.24.247:3000/admin/login', urlencoded, {
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        })
-        .then((result) => {
-          console.log('result are', result.data.token);
-          if (result.data.token) {
-            // console.log('result are', result.data)
-            localStorage.setItem('admin-login', result.data.token);
-            localStorage.setItem(
-              'login-details',
-              JSON.stringify(result.data.res)
-            );
-            // localStorage.setItem('login-id', result.data);
-            history.push('/admindashboard');
-            // console.log('data');
-          } else {
-            alert('Invalid User');
-            console.log('error');
-          }
-        });
-
-      // fetch('http://localhost:6302/admin/login', {
-      //   method: 'post',
-      //   headers: {
-      //     Accept: 'application/json',
-      //     "Content-Type": 'application/x-www-form-urlencoded',
-      //   },
-      //   body: JSON.stringify({ email, password }),
-      // })
-      //   .then((Response) => Response.json())
-      //   .then((result) => {
-      //     console.log('result-----',result);
-      //     if (result.token) {
-      //       localStorage.setItem('login', result.token);
-      //       console.log(result.token);
-      //       history.push('/admindashboard');
-      //       console.log('data');
-      //     } else {
-      //       alert('Invalid User');
-      //       console.log('error');
-      //     }
-      //   });
+  
     }
   };
 

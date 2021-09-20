@@ -9,22 +9,24 @@ const AdminVenues = () => {
 
   const token = localStorage.getItem('admin-login');
 
-  const getData = async()=>{
-    await axios
-      .get('http://localhost:3000/admin/venues', {
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-          auth: token,
-        },
-      })
-      .then((res) => {
-        return setVenuesData(res.data.data);
-      })
-      .catch((err) => console.log(err));
-  }
-  // useEffect(() => {
-  //   getData()
-  // }, [])
+  // const getData = async()=>{
+  //   await axios
+  //     .get('http://localhost:3000/admin/venues', {
+  //       headers: {
+  //         'Content-Type': 'application/x-www-form-urlencoded',
+  //         auth: token,
+  //       },
+  //     })
+  //     .then((res) => {
+  //       return setVenuesData(res.data.data);
+  //     })
+  //     .catch((err) => console.log(err));
+  // }
+  // // useEffect(() => {
+  // //   getData()
+  // // }, [])
+
+
   useEffect(async () => {
     await instence
       .get('admin/venues')
@@ -35,6 +37,11 @@ const AdminVenues = () => {
   }, []);
   console.log(venuesData);
 
+  // edit handle
+  const handleChange = ()=>{
+    
+  }
+  
   return (
     <>
       <div className="lrm-content">
@@ -99,10 +106,10 @@ const AdminVenues = () => {
                         <span className="badge badge-lightgreen">Active</span>{' '}
                       </td>
                       <td>
-                        <a href="#" className="action-btn">
+                        <button onClick={handleChange} className="action-btn">
                           {' '}
                           <img src="images/svg/edit-fill.svg" alt="view" />
-                        </a>
+                        </button>
                         <a href="#" className="action-btn">
                           {' '}
                           <img src="images/svg/View.svg" alt="view" />
