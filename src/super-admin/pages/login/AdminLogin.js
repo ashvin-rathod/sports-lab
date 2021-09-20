@@ -1,4 +1,3 @@
-
 import axios from 'axios';
 import React, { useState } from 'react';
 import { Form, FormGroup } from 'react-bootstrap';
@@ -16,7 +15,7 @@ const AdminLogin = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-  
+
     if (email === '') {
       setEmailerror('Please enter email id');
     } else {
@@ -28,14 +27,13 @@ const AdminLogin = () => {
       setPasserror('');
     }
     if (email && password) {
-
       // fetch api
       var urlencoded = new URLSearchParams();
-      urlencoded.append("email", email);
-      urlencoded.append("password", password);
-      
+      urlencoded.append('email', email);
+      urlencoded.append('password', password);
+
       // const url = 'admin/login';
-      
+
       // postaxios(url,urlencoded).then((result)=>{
       //   console.log('result are', result.data.token)
       //   if (result.data.token) {
@@ -50,24 +48,27 @@ const AdminLogin = () => {
       //   }
       // })
 
-
-      
-      axios.post(`http://localhost:3000/admin/login`,urlencoded,{
-        headers: { "Content-Type": 'application/x-www-form-urlencoded' }
-      }).then((result)=>{
-        console.log('result are', result.data.token)
-        if (result.data.token) {
-        // console.log('result are', result.data)
-        localStorage.setItem('admin-login', result.data.token);
-        localStorage.setItem('login-details', JSON.stringify(result.data.res));
-        // localStorage.setItem('login-id', result.data);
-        history.push('/admindashboard');
-        // console.log('data');
-        } else {
-          alert('Invalid User');
-          console.log('error');
-        }
-      })
+      axios
+        .post('http://18.171.24.247:3000/admin/login', urlencoded, {
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        })
+        .then((result) => {
+          console.log('result are', result.data.token);
+          if (result.data.token) {
+            // console.log('result are', result.data)
+            localStorage.setItem('admin-login', result.data.token);
+            localStorage.setItem(
+              'login-details',
+              JSON.stringify(result.data.res)
+            );
+            // localStorage.setItem('login-id', result.data);
+            history.push('/admindashboard');
+            // console.log('data');
+          } else {
+            alert('Invalid User');
+            console.log('error');
+          }
+        });
 
       // fetch('http://localhost:6302/admin/login', {
       //   method: 'post',
@@ -159,7 +160,7 @@ const AdminLogin = () => {
                       </p>
                     </div>
                     <div className="sr-link mt-3 mb-5">
-                      <Link to='/adminforgotpass' className="sa-deco1">
+                      <Link to="/adminforgotpass" className="sa-deco1">
                         Forgot Password ?
                       </Link>
                     </div>
