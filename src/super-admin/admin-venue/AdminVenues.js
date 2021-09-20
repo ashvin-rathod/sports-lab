@@ -7,6 +7,7 @@ import './AdminAddVenue.css'
 
 const AdminVenues = () => {
   const [venuesData, setVenuesData] = useState([]);
+  const [venueId, setVenueId] = useState(null)
 
   const token = localStorage.getItem('admin-login');
 
@@ -27,22 +28,36 @@ const AdminVenues = () => {
   // //   getData()
   // // }, [])
 
-
-  useEffect(async () => {
+  const getVenue = async()=>{
     await instence
       .get('admin/venues')
       .then((res) => {
         return setVenuesData(res.data.data);
       })
       .catch((err) => console.log(err));
+  }
+
+  useEffect(async () => {
+    getVenue()
   }, []);
   console.log(venuesData);
 
   // edit handle
-  const handleChange = ()=>{
+  const handleEdit = ()=>{
     
   }
   
+  // handle Remove
+ const handleRemove = async(venueId)=>{
+       await instence.put(`admin/removevenue/${venueId}`)
+       .then((result)=>{
+        getVenue()
+       })
+
+  // alert(venueId)
+   
+ }
+ 
   return (
     <>
       <div className="lrm-content">
@@ -107,19 +122,20 @@ const AdminVenues = () => {
                         <span className="badge badge-lightgreen">Active</span>{' '}
                       </td>
                       <td> 
-                        <button onClick={handleChange} className="action-btn">
+                        <button onClick={handleEdit} className="action-btn">
                           {' '}
                           <img src="images/svg/edit-fill.svg" alt="view" />
                         </button>
-                        <button  className="action-btn">
+                        <Link to={`/adminvenueinfo/${venue.id}`} className="action-btn">
                           {' '}
                           <img src="images/svg/View.svg" alt="view" />
-                        </button>
+                        </Link>
                         <button
                          
                           className="action-btn"
                           data-toggle="modal"
                           data-target="#delete-modal"
+                          onClick={()=> setVenueId(venue.id)}
                         >
                           {' '}
                           <img src="images/svg/BinV1.svg" alt="view" />
@@ -233,7 +249,7 @@ const AdminVenues = () => {
               <h5>Before you proceed!</h5>
               <p>Are you sure you want to delete this venue?</p>
               <div className="bottom">
-                <button type="button" className="btn btn-primary">
+                <button  onClick={()=> handleRemove(venueId)} type="button" className="btn btn-outline-primary" data-dismiss="modal">
                   Yes
                 </button>
                 <button

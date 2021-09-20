@@ -3,6 +3,7 @@ import { useHistory } from 'react-router';
 // import { postaxios } from '../../axios';
 import './AdminAddVenue.css';
 import axios from 'axios';
+import instence from '../../helpers/axiosistence';
 // field states
 const AdminAddVenue = () => {
   const history = useHistory();
@@ -116,13 +117,8 @@ const AdminAddVenue = () => {
     formdata.append('city', city);
     // formdata.append('upload_image',image ); 
 
-    await axios
-      .post('http://localhost:3000/admin/createvenue',   formdata, {
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-          auth: token,
-        },
-      })
+    await instence
+      .post('http://18.171.24.247:3000/admin/createvenue', formdata)
       .then((res) => {
         console.log(res);
         if (res.data) {

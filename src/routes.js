@@ -87,7 +87,7 @@ const routes = [
     { path: '/adminsummary', name: 'AdminSummary', component: AdminSummary, sidebar: false, title:'Summary' },
     { path: "/adminaddvenue", exact: true, name: 'AdminAddVenue', component: AdminAddVenue, sidebar: false, title:'Add Venue' },
     { path: "/adminvenues", exact: true, name: 'AdminVenues', component: AdminVenues, sidebar: true },
-    { path: "/adminvenueinfo", exact: true, name: 'AdminVenuesInfo', component: AdminVenuesInfo, sidebar: false, title:'View Venue' },
+    { path: "/adminvenueinfo/:id", exact: true, name: 'AdminVenuesInfo', component: AdminVenuesInfo, sidebar: false, title:'View Venue' },
     { path: "/adminvenuemap", exact: true, name: 'AdminVenueMap', component: AdminVenueMap, sidebar: true },
     { path: "/askquestion", exact: true, name: 'AskQuestion', component: AskQuestion, sidebar: false, title:'Ask Question' },
     { path: "/adminchangepass", exact: true, name: 'AdminChangePassword', component: AdminChangePassword, sidebar: false , title:'Change Password'},
