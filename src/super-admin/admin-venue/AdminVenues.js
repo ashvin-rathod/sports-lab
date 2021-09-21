@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import instence from '../../helpers/axiosistence';
@@ -96,7 +95,7 @@ const AdminVenues = () => {
                   return (
                     <tr key={venue.id}>
                       <td >
-                        <a href="#">2358</a>{' '}
+                        <a href="#">{venue.id}</a>{' '}
                       </td>
                       <td>{venue.venue_name}</td>
                       <td>{venue.state}</td>
