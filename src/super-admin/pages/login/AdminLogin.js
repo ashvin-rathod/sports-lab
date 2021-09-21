@@ -33,8 +33,8 @@ const AdminLogin = () => {
       urlencoded.append("password", password);
       
         await instence.post('admin/login', urlencoded)
-                       .then((result)=>{console.log('result are', result.data.token);
-                        if(result.data.token){
+                       .then((result)=>{console.log('result are', result.data.data[0].token);
+                        if(result.data){
                           localStorage.setItem('admin-login', result.data.token);
                           localStorage.setItem('login-details', JSON.stringify(result.data.res));
                           history.push('/admindashboard');
@@ -65,22 +65,22 @@ const AdminLogin = () => {
       //   }
       // });
 
-      axios.post(`http://18.171.24.247:3000/admin/login`,urlencoded,{
-        headers: { "Content-Type": 'application/x-www-form-urlencoded' }
-      }).then((result)=>{
-        console.log('result are', result.data.token)
-        if (result.data.token) {
-        // console.log('result are', result.data)
-        localStorage.setItem('admin-login', result.data.token);
-        localStorage.setItem('login-details', JSON.stringify(result.data.res));
-        // localStorage.setItem('login-id', result.data);
-        history.push('/admindashboard');
-        // console.log('data');
-        } else {
-          alert('Invalid User');
-          console.log('error');
-        }
-      })
+      // axios.post(`http://18.171.24.247:3000/admin/login`,urlencoded,{
+      //   headers: { "Content-Type": 'application/x-www-form-urlencoded' }
+      // }).then((result)=>{
+      //   console.log('result are', result.data.token)
+      //   if (result.data.token) {
+      //   // console.log('result are', result.data)
+      //   localStorage.setItem('admin-login', result.data.token);
+      //   localStorage.setItem('login-details', JSON.stringify(result.data.res));
+      //   // localStorage.setItem('login-id', result.data);
+      //   history.push('/admindashboard');
+      //   // console.log('data');
+      //   } else {
+      //     alert('Invalid User');
+      //     console.log('error');
+      //   }
+      // })
     }
   };
 

@@ -2,46 +2,41 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import instence from '../../helpers/axiosistence';
-import './AdminAddVenue.css'
+import './AdminAddVenue.css';
 // import axios from 'axios'
 
 const AdminVenues = () => {
   const [venuesData, setVenuesData] = useState([]);
-  const [venueId, setVenueId] = useState(null)
+  const [venueId, setVenueId] = useState(null);
 
-  const token = localStorage.getItem('admin-login');
+  // const token = localStorage.getItem('admin-login');
 
-
-  const getVenue = async()=>{
+  const getVenue = async () => {
     await instence
       .get('admin/venues')
       .then((res) => {
         return setVenuesData(res.data.data);
       })
       .catch((err) => console.log(err));
-  }
+  };
 
   useEffect(async () => {
-    getVenue()
+    getVenue();
   }, []);
   console.log(venuesData);
 
   // edit handle
-  const handleEdit = ()=>{
-    
-  }
-  
-  // handle Remove
- const handleRemove = async(venueId)=>{
-       await instence.put(`admin/removevenue/${venueId}`)
-       .then((result)=>{
-        getVenue()
-       })
+  const handleEdit = () => {};
 
-  // alert(venueId)
-   
- }
- 
+  // handle Remove
+  const handleRemove = async (venueId) => {
+    await instence.put(`admin/removevenue/${venueId}`).then((result) => {
+      getVenue();
+    });
+
+    // alert(venueId)
+  };
+
   return (
     <>
       <div className="lrm-content">
@@ -90,12 +85,10 @@ const AdminVenues = () => {
                 </tr>
               </thead>
               <tbody>
-
-                {
-                venuesData.map((venue) => {
+                {venuesData.map((venue) => {
                   return (
                     <tr key={venue.id}>
-                      <td >
+                      <td>
                         <a href="#">2358</a>{' '}
                       </td>
                       <td>{venue.venue_name}</td>
@@ -105,21 +98,23 @@ const AdminVenues = () => {
                       <td>
                         <span className="badge badge-lightgreen">Active</span>{' '}
                       </td>
-                      <td> 
+                      <td>
                         <button onClick={handleEdit} className="action-btn">
                           {' '}
                           <img src="images/svg/edit-fill.svg" alt="view" />
                         </button>
-                        <Link to={`/adminvenueinfo/${venue.id}`} className="action-btn">
+                        <Link
+                          to={`/adminvenueinfo/${venue.id}`}
+                          className="action-btn"
+                        >
                           {' '}
                           <img src="images/svg/View.svg" alt="view" />
                         </Link>
                         <button
-                         
                           className="action-btn"
                           data-toggle="modal"
                           data-target="#delete-modal"
-                          onClick={()=> setVenueId(venue.id)}
+                          onClick={() => setVenueId(venue.id)}
                         >
                           {' '}
                           <img src="images/svg/BinV1.svg" alt="view" />
@@ -132,10 +127,7 @@ const AdminVenues = () => {
                       </td>
                     </tr>
                   );
-                })
-                
-                
-                }
+                })}
 
                 {/* <tr>
               <td><a href="#">2358</a> </td>
@@ -233,7 +225,12 @@ const AdminVenues = () => {
               <h5>Before you proceed!</h5>
               <p>Are you sure you want to delete this venue?</p>
               <div className="bottom">
-                <button  onClick={()=> handleRemove(venueId)} type="button" className="btn btn-outline-primary" data-dismiss="modal">
+                <button
+                  onClick={() => handleRemove(venueId)}
+                  type="button"
+                  className="btn btn-outline-primary"
+                  data-dismiss="modal"
+                >
                   Yes
                 </button>
                 <button
