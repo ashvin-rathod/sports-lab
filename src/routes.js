@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 //#region admin
 
 
@@ -34,6 +35,7 @@ const AdminUsers = React.lazy(()=> import('./super-admin/admin-user/AdminUsers')
 const AdminViewMaintenanceReports = React.lazy(()=> import('./super-admin/admin-view/AdminViewMaintenanceReports'))
 const AdminViewTestReports = React.lazy(()=> import('./super-admin/admin-view/AdminViewTestReports'))
 const AdminViewTestReportsDetails = React.lazy(()=> import('./super-admin/admin-view/AdminViewTestReportsDetails'))
+const AdminEditVenue = React.lazy(()=> import('./super-admin/admin-venue/AdminEditVenue'))
 
 
 
@@ -114,6 +116,7 @@ const routes = [
     { path: "/adminviewmaintenancereports", exact: true, name: 'AdminViewMaintenanceReports', component: AdminViewMaintenanceReports, sidebar: true },
     { path: "/adminviewtestreports", exact: true, name: 'AdminViewTestReports', component: AdminViewTestReports, sidebar: true },
     { path: "/adminviewtestreportsdetails", exact: true, name: 'AdminViewTestReportsDetails', component: AdminViewTestReportsDetails, sidebar: false, title:'Back' },
+    { path: "/admineditvenue", exact: true, name: 'AdminEditVenue', component: AdminEditVenue, sidebar: false, title:'Back' },
 
 
 

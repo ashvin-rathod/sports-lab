@@ -1,14 +1,19 @@
-import React,{useEffect} from 'react'
+import React,{useEffect, useState} from 'react'
 import instence from '../../helpers/axiosistence'
 import './venue.css'
 
 const AdminVenuesInfo = (props) => {
 
-const infoId =props.match.params.id
+ const [venuesInfo, setVenuesInfo] = useState([])     
+ const infoId =props.match.params.id
 
 useEffect(async() => {
          await instence.get(`admin/venues/${infoId}`)  
-                       .then((result)=>console.log(result))
+                       .then((result)=>{
+                        setVenuesInfo(result.data.data[0]);
+                        console.log(result.data.data[0]);
+                        console.log(venuesInfo,'stateeee');
+                    })
 }, [])
 
     return (
@@ -60,27 +65,27 @@ useEffect(async() => {
                                                             <table className="table table-borderless color-dark venues-tbl">
                                                                 <tr>
                                                                     <th>ID</th>
-                                                                    <td className="opacity-06 text-right">2358</td>
+                                                                    <td className="opacity-06 text-right">{venuesInfo.id}</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <th>Name</th>
-                                                                    <td className="opacity-06 text-right">Abu Dhabi Cricket #3</td>
+                                                                    <td className="opacity-06 text-right">{venuesInfo.venue_name}</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <th>State</th>
-                                                                    <td className="opacity-06 text-right">Missouri</td>
+                                                                    <td className="opacity-06 text-right">{venuesInfo.state}</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <th>Address</th>
-                                                                    <td className="opacity-06 text-right">2331 Villager Park Ct</td>
+                                                                    <td className="opacity-06 text-right">{venuesInfo.address}</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <th>City</th>
-                                                                    <td className="opacity-06 text-right">San Francisco</td>
+                                                                    <td className="opacity-06 text-right">{venuesInfo.city}</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <th>Country</th>
-                                                                    <td className="opacity-06 text-right">USA</td>
+                                                                    <td className="opacity-06 text-right">{venuesInfo.country}</td>
                                                                 </tr>
 
                                                             </table>
