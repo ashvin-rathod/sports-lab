@@ -10,6 +10,7 @@ const AdminVenues = () => {
   const [venueId, setVenueId] = useState(null);
 
   // const token = localStorage.getItem('admin-login');
+  // console.log(token);
 
   const getVenue = async () => {
     await instence
